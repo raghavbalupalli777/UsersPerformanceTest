@@ -21,7 +21,7 @@ node {
 
     stage('Execute Performance Tests') {
         dir("${WORKSPACE}/scripts") {
-            bat "C:\Users\ragha\Downloads\apache-jmeter-5.4.1\apache-jmeter-5.4.1\bin\jmeter.bat -n -t Test_Plan_users123.jmx -l Test_Plan_users123.report.jtl"
+            bat "C:/Users/ragha/Downloads/apache-jmeter-5.4.1/apache-jmeter-5.4.1/bin/jmeter.bat -n -t Test_Plan_users123.jmx -l Test_Plan_users123.report.jtl"
         }
     }
 
