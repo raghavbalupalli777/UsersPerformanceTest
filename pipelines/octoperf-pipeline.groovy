@@ -7,22 +7,21 @@ node {
                 $class: 'GitSCM',
                 userRemoteConfigs: [
                         [
-                                url: "https://bitbucket.org/xxxxxx/performance-test-repo.git",
-                                credentialsId: "octoperf-user"
+                                url: "https://github.com/raghavbalupalli777/UsersPerformanceTest.git",
+                                credentialsId: "perf-user"
                         ]
                 ],
-                branches: [[name: "master"]]
+                branches: [[name: "main"]]
         ], poll: false
     }
 
     stage('Complete any setup steps') {
         echo "Complete set-up steps"
-        echo "${octoperf_test_value}"
     }
 
     stage('Execute Performance Tests') {
         dir("${WORKSPACE}/scripts") {
-            bat "c:/apache-jmeter/apache-jmeter/bin/jmeter.bat -n -t Shift-Left.jmx -l Shift-Left.jtl -Joptestvalue=${octoperf_test_value}"
+            bat "C:\Users\ragha\Downloads\apache-jmeter-5.4.1\apache-jmeter-5.4.1\bin\jmeter.bat -n -t Test_Plan_users123.jmx -l Test_Plan_users123.report.jtl"
         }
     }
 
@@ -30,3 +29,4 @@ node {
         echo "Analyse results"
     }
 }
+
