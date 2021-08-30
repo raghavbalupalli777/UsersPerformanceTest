@@ -8,7 +8,7 @@ node {
                 userRemoteConfigs: [
                         [
                                 url: "https://github.com/raghavbalupalli777/UsersPerformanceTest.git",
-                                credentialsId: "perf-user"
+                                credentialsId: "users-api"
                         ]
                 ],
                 branches: [[name: "main"]]
